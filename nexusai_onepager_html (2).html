@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus AI: Safe AI for Regulated European Companies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #ffffff;
+            background-color: #121918;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 30px 20px;
+        }
+        
+        .header h1 {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 1.2;
+            text-transform: uppercase;
+            color: #139782;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        
+        .header .tagline {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 1.2;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+        
+        .header .subtitle {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #ffffff;
+            opacity: 0.8;
+        }
+        
+        .content {
+            width: 100%;
+        }
+        
+        .content-row {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .content-row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .column-left {
+            float: left;
+            width: 48%;
+            margin-right: 4%;
+        }
+        
+        .column-right {
+            float: right;
+            width: 48%;
+        }
+        
+        .card {
+            background-color: #ffffff;
+            border-radius: 20px;
+            border: 1px solid #E5E5E5;
+            padding: 25px;
+            color: #121918;
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+        
+        .card h2 {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 1.2;
+            color: #139782;
+            margin-bottom: 15px;
+        }
+        
+        .card h3 {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 1.2;
+            color: #121918;
+            margin-bottom: 10px;
+            margin-top: 15px;
+        }
+        
+        .card p {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #121918;
+            margin-bottom: 12px;
+        }
+        
+        .card ul {
+            padding-left: 18px;
+            margin-bottom: 12px;
+        }
+        
+        .card li {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #121918;
+            margin-bottom: 6px;
+        }
+        
+        .highlight-box {
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #139782;
+        }
+        
+        .examples {
+            color: #121918;
+            font-size: 14px;
+        }
+        
+        .examples strong {
+            color: #139782;
+            font-weight: bold;
+        }
+        
+        .tech-steps {
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .tech-steps ol {
+            padding-left: 18px;
+        }
+        
+        .tech-steps li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .tech-steps strong {
+            color: #121918;
+            font-weight: bold;
+        }
+        
+        .comparison-table {
+            background-color: #ffffff;
+            border: 1px solid #E5E5E5;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 15px 0;
+            width: 100%;
+        }
+        
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .comparison-table th {
+            background-color: #139782;
+            color: #ffffff;
+            padding: 12px;
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: left;
+        }
+        
+        .comparison-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #E5E5E5;
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .value-section {
+            margin: 15px 0;
+        }
+        
+        .value-item {
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            padding: 15px;
+            border: 1px solid #E5E5E5;
+            margin-bottom: 15px;
+        }
+        
+        .value-item h4 {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 1.2;
+            color: #121918;
+            margin-bottom: 10px;
+        }
+        
+        .value-item ul {
+            padding-left: 15px;
+        }
+        
+        .value-item li {
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+        
+        .value-item strong {
+            color: #139782;
+            font-weight: bold;
+        }
+        
+        .industries-box {
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .industries-box p {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .industries-box strong {
+            color: #139782;
+            font-weight: bold;
+        }
+        
+        .contact-section {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 2px solid #E5E5E5;
+        }
+        
+        .contact-section h2 {
+            margin-bottom: 12px;
+        }
+        
+        .contact-info p {
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+        
+        .contact-link {
+            color: #139782;
+            text-decoration: underline;
+        }
+        
+        strong {
+            font-weight: bold;
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                background-color: white !important;
+                color: #121918 !important;
+                padding: 0;
+                font-size: 12px;
+            }
+            
+            .header h1 {
+                color: #139782 !important;
+                font-size: 36px;
+            }
+            
+            .header .tagline,
+            .header .subtitle {
+                color: #121918 !important;
+            }
+            
+            .card {
+                page-break-inside: avoid;
+                margin-bottom: 15px;
+            }
+            
+            .content-row {
+                page-break-inside: avoid;
+            }
+        }
+        
+        /* Responsive for mobile */
+        @media (max-width: 768px) {
+            .column-left,
+            .column-right {
+                float: none;
+                width: 100%;
+                margin-right: 0;
+            }
+            
+            .header h1 {
+                font-size: 32px;
+            }
+            
+            body {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Nexus AI</h1>
+        <div class="tagline">Safe AI for Regulated European Companies</div>
+        <div class="subtitle">Turn any AI tool into EU-compliant AI in days, not months</div>
+    </div>
+    
+    <div class="content">
+        <div class="content-row">
+            <div class="column-left">
+                <div class="card">
+                    <h2>The Problem Facing Regulated Industries</h2>
+                    <p><strong>Banks, hospitals, and insurance companies want AI productivity gains but face massive regulatory risk.</strong></p>
+                    
+                    <div class="highlight-box">
+                        <h3>Real Examples:</h3>
+                        <div class="examples">
+                            • <strong>Deutsche Bank</strong> wants ChatGPT for analysts but can't risk €2.8B fines (4% of revenue)<br><br>
+                            • <strong>Healthcare providers</strong> need AI for patient care but GDPR violations cost €50M+ annually<br><br>
+                            • <strong>Insurance companies</strong> want AI claims processing but lack EU AI Act compliance framework
+                        </div>
+                    </div>
+                    
+                    <h3>Current "Solutions" Force Manual Compliance Tracking:</h3>
+                    <ul>
+                        <li>Legal teams manually document every AI use case</li>
+                        <li>IT departments spend months building custom compliance systems</li>
+                        <li>Companies hire €150k/year compliance specialists just for AI oversight</li>
+                        <li><strong>Result:</strong> Most regulated companies simply avoid AI entirely</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h2>Automatic Compliance Gateway</h2>
+                    <p>Nexus AI Gateway acts as a <strong>smart gateway</strong> between customer applications and any AI service. The platform automatically handles all European compliance requirements while forwarding AI requests normally.</p>
+                    
+                    <div class="tech-steps">
+                        <h3>Technical Overview:</h3>
+                        <ol>
+                            <li><strong>Intercept:</strong> Customer applications send AI requests to Nexus AI Gateway instead of directly to AI providers</li>
+                            <li><strong>Process:</strong> Nexus AI automatically creates unchangeable audit logs, applies EU data protection, and generates compliance documents</li>
+                            <li><strong>Forward:</strong> Clean requests go to the chosen AI provider (ChatGPT, Claude, etc.)</li>
+                            <li><strong>Return:</strong> Responses come back through Nexus AI compliance layer with full documentation</li>
+                        </ol>
+                    </div>
+                    
+                    <h3>Works With Any AI Access:</h3>
+                    <ul>
+                        <li><strong>Direct API calls</strong> → Change endpoint URL (2 lines of code)</li>
+                        <li><strong>Business software</strong> → Simple SDK integration gives software vendors EU compliance feature for customers</li>
+                        <li><strong>Browser tools</strong> → Company browser extension covers ChatGPT, Copilot</li>
+                        <li><strong>Existing logs</strong> → Generate compliance docs from past AI usage</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="column-right">
+                <div class="card">
+                    <h2>Value Nexus AI Delivers</h2>
+                    
+                    <div class="value-section">
+                        <div class="value-item">
+                            <h4>For Regulated Companies</h4>
+                            <ul>
+                                <li><strong>Use AI safely:</strong> Full EU AI Act + GDPR compliance from day one</li>
+                                <li><strong>Avoid massive fines:</strong> Automatic documentation prevents 4% revenue penalties</li>
+                                <li><strong>Fast deployment:</strong> Days instead of 6-month compliance projects</li>
+                                <li><strong>Cost savings:</strong> 60% less than traditional €150k-€500k annual compliance costs</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="value-item">
+                            <h4>For IT & Compliance Teams</h4>
+                            <ul>
+                                <li><strong>Automatic audit trails:</strong> Every AI interaction logged with regulatory timestamps</li>
+                                <li><strong>EU data residency:</strong> All sensitive data stays in European data centers</li>
+                                <li><strong>Ready-to-submit reports:</strong> Compliance documents generated automatically for regulators</li>
+                                <li><strong>Universal coverage:</strong> One solution protects all AI tools across customer organization</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h3>Target Industries</h3>
+                    <div class="industries-box">
+                        <p><strong>Financial Services:</strong> Deutsche Bank, ING, Allianz using AI for trading, fraud detection, customer service</p>
+                        <p><strong>Healthcare:</strong> Charité Berlin, Karolinska using AI for diagnostics, patient records, research</p>
+                        <p><strong>Insurance:</strong> AXA, Munich Re using AI for claims processing, risk assessment, underwriting</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2>Why Nexus AI vs. Alternatives</h2>
+                    <div class="comparison-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Manual Compliance</th>
+                                    <th>Nexus AI</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>6 months setup</td>
+                                    <td>Days to deploy</td>
+                                </tr>
+                                <tr>
+                                    <td>€150k-€500k annually</td>
+                                    <td>60% cost reduction</td>
+                                </tr>
+                                <tr>
+                                    <td>Legal team documentation</td>
+                                    <td>Automatic compliance docs</td>
+                                </tr>
+                                <tr>
+                                    <td>Covers limited AI usage</td>
+                                    <td>Works with any AI tool</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="contact-section">
+                        <h2>Contact Us</h2>
+                        <div class="contact-info">
+                            <p><strong>Andres Gavriljuk</strong></p>
+                            <p><a href="mailto:andres.gavriljuk@pragmatiqai.com" class="contact-link">andres.gavriljuk@pragmatiqai.com</a></p>
+                            <p><a href="https://www.linkedin.com/in/gavriljukandres/" class="contact-link" target="_blank">LinkedIn Profile</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
